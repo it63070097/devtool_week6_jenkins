@@ -14,5 +14,23 @@ pipeline {
                 sh 'python3  Webhook/main.py'
             }
         }
+        stage('add name') {
+            steps {
+                echo 'butthachai'
+            }
+        }
+        stage('add nickname') {
+            steps {
+                echo 'tee'
+            }
+        }
+    }
+ post {
+        success {
+            echo 'IS SUCCESS'
+        }
+        failure {
+            echo 'IS FAILURE'
+        }
     }
 }
